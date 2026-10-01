@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Not Found</title>
+<script>
+// The earlier vcpe.dev notes now live at revs.dev; send links to their paths there.
+(function(){var moved=['ccsp-bus','docs','drawio','forkstat','lxd','no-lxd','rbus-proxy-filter','rdkb-kirkstone','rssfree','syscfg','sysevent','unlisted','vcpe-rdkb'];
+ var first=location.pathname.split('/')[1]||'';
+ if(moved.indexOf(first)>=0)location.replace('https://revs.dev'+location.pathname+location.search+location.hash);})();
+</script>
+<style>
+:root{--bg:#f3f5f7;--ink:#18202b;--muted:#5a6676;--accent:#1f5fbf}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#10151c;--ink:#e3e9f0;--muted:#9aa6b5;--accent:#7aa7f0;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10151c;--ink:#e3e9f0;--muted:#9aa6b5;--accent:#7aa7f0;color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:640px;margin:0 auto;padding:60px 16px}
+h1{font-size:26px;margin:0 0 8px}
+p{color:var(--muted)}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<main>
+  <h1>Page not found</h1>
+  <p>Nothing lives at this address. Start at <a href="/">vcpe.dev</a>, or go straight to the <a href="/easymesh-labs/">EasyMesh labs</a>.</p>
+  <p>Looking for the earlier vCPE notes? They are at <a href="https://revs.dev/">revs.dev</a>.</p>
+</main>
+</body>
+</html>

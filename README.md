@@ -7,5 +7,6 @@ The root GitHub Pages site of the boardfarmdevs account, served at https://vcpe.
 - `404.html`: the earlier vcpe.dev notes moved to https://revs.dev/; links to their paths
   (`/docs/`, `/lxd/`, `/rssfree/`, ...) are sent there. Anything else gets a not-found page.
 
-Every other boardfarmdevs repository with Pages is served under this domain as a path, for
+Published by `.github/workflows/pages.yml` (Pages source: GitHub Actions; custom domain set in
+Settings -> Pages). Every other boardfarmdevs repository with Pages is served under this domain as a path, for
 example https://vcpe.dev/emosa-lab/.

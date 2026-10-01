@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>vcpe.dev</title>
-<meta name="description" content="Virtual CPE labs: containerized RDK-B and prplMesh gateways running EasyMesh on an emulated radio medium, OpenSync pods through EMOSA, and the protocol on physical hardware.">
+<meta name="description" content="Virtual CPE labs: the EasyMesh labs at mesh.vcpe.dev and the apps labs at apps.vcpe.dev.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
@@ -16,17 +16,15 @@
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 "IBM Plex Sans",system-ui,sans-serif}
 main{max-width:880px;margin:0 auto;padding:44px 16px 60px}
 h1{font:600 34px/1.1 "Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;margin:0 0 8px;letter-spacing:.01em}
-h2{font:600 13px/1.2 "IBM Plex Sans",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:30px 0 10px}
 .lead{color:var(--muted);margin:0;max-width:66ch}
-a.hero{display:block;margin-top:26px;background:var(--accent-soft);border:1px solid var(--accent);border-radius:12px;padding:20px 22px;color:inherit;text-decoration:none}
-a.hero b{display:block;font:600 24px/1.15 "Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;color:var(--accent)}
-a.hero span{display:block;margin-top:6px;color:var(--ink);max-width:70ch}
+.pick{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:28px}
+.hero{display:block;background:var(--accent-soft);border:1px solid var(--accent);border-radius:12px;padding:20px 22px;color:inherit;text-decoration:none}
+.hero b{display:block;font:600 24px/1.15 "Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;color:var(--accent)}
+.hero span{display:block;margin-top:6px;color:var(--ink);max-width:70ch}
 a.hero:hover,a.hero:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
-a.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:13px 15px;color:inherit;text-decoration:none}
-a.card:hover,a.card:focus-visible{border-color:var(--accent);outline:none}
-a.card b{color:var(--accent);font-weight:600}
-a.card span{display:block;color:var(--muted);font-size:13.5px;margin-top:3px}
+.hero i{display:block;margin-top:10px;font-style:normal;font-size:13px;color:var(--muted)}
+.hero.soon{background:var(--panel);border-color:var(--line)}
+.hero.soon b{color:var(--muted)}
 footer{margin-top:36px;font-size:13px;color:var(--muted)}
 footer a{color:var(--accent)}
 </style>
@@ -34,26 +32,15 @@ footer a{color:var(--accent)}
 <body>
 <main>
   <h1>vcpe.dev</h1>
-  <p class="lead">Virtual CPE labs: complete Wi-Fi mesh networks with containerized gateways, extenders and clients on an emulated radio medium, and the same protocols on real hardware.</p>
+  <p class="lead">Virtual CPE labs: complete home networks with containerized gateways, extenders and clients on an emulated radio medium, and the same protocols on real hardware.</p>
 
-  <a class="hero" href="/easymesh-labs/"><b>EasyMesh labs →</b>
-    <span>EasyMesh optimizer development in a rich virtual lab on RDK and prplMesh, unchanged OpenSync pods in an EasyMesh system through EMOSA, and the protocol on certified hardware.</span></a>
-
-  <h2>The labs</h2>
-  <div class="grid">
-    <a class="card" href="/meta-cmf-bananapi-vcpe/"><b>RDK EasyMesh</b><span>RDK-B gateways and extenders as containers, running RDK EasyMesh on virtual radios.</span></a>
-    <a class="card" href="/prplmesh-lab/"><b>prplMesh</b><span>The same lab on native prplMesh.</span></a>
-    <a class="card" href="/emosa-lab/"><b>EMOSA</b><span>The EasyMesh-to-OpenSync adapter: unchanged OpenSync pods as EasyMesh agents.</span></a>
-    <a class="card" href="/opensync-lab/"><b>OpenSync lab</b><span>A containerized OpenSync gateway and OpenSync pods on virtual radios.</span></a>
-    <a class="card" href="/easymesh-lab/"><b>Protocol lab</b><span>A from-scratch IEEE 1905.1/EasyMesh controller and teaching panel with physical extenders.</span></a>
-  </div>
-
-  <h2>Components and tools</h2>
-  <div class="grid">
-    <a class="card" href="/easymesh-medium/"><b>RF medium</b><span>wmediumd, hwsim and the rooms every lab runs on.</span></a>
-    <a class="card" href="/easymesh-optimizer/"><b>Optimizer</b><span>The steering optimizer and the room service that runs it live.</span></a>
-    <a class="card" href="/easymesh-room-builder/"><b>Room builder</b><span>A visual designer for the labs' rooms.</span></a>
-    <a class="card" href="/easymesh-resources/"><b>Resources</b><span>The MV3 memory model and production plan.</span></a>
+  <div class="pick">
+    <a class="hero" href="https://mesh.vcpe.dev/"><b>EasyMesh labs →</b>
+      <span>Optimizer development on RDK and prplMesh, unchanged OpenSync pods in an EasyMesh system through EMOSA, and the protocol on certified hardware.</span>
+      <i>mesh.vcpe.dev</i></a>
+    <div class="hero soon" aria-disabled="true"><b>Apps labs</b>
+      <span>Coming soon.</span>
+      <i>apps.vcpe.dev</i></div>
   </div>
 
   <footer>The earlier vCPE notes are at <a href="https://revs.dev/">revs.dev</a>.</footer>

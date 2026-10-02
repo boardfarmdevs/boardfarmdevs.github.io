@@ -21,7 +21,7 @@ jobs:
       - name: Assemble the site
         run: |
           mkdir -p dist/site
-          cp index.html 404.html .nojekyll dist/site/
+          cp index.html 404.html .nojekyll favicon.svg favicon.ico apple-touch-icon.png dist/site/
           find dist/site -type f | sort
       - uses: actions/upload-pages-artifact@v4
         with:
